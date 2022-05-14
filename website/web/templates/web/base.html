@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'web/css/bootstrap.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'web/css/style.css' %}" />
+    </head>
+<body>
+    <div class="navbar navbar-default">
+        <div class="container-fluid">
+            <a class="navbar-brand" style="height: auto;" href="https://www.keele.ac.uk/">
+                <img style='width: 100px;' src="{% static 'web/images/logo.svg' %}">
+            </a>
+        </div>
+    </div>
+    <div style="display: flex;">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 well">
+            <h3 class="text-primary">Registration or Login Form</h3>
+            <hr style="border-top:1px dotted #000;"/>
+            {% block body %}
+            {% endblock %}
+        </div>
+    </div>
+    <br>
+    <div>        
+        <footer id="footer" class="footer-1">
+            <div class="main-footer widgets-dark typo-light">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <div class="widget subscribe no-box">
+                                <h5 class="widget-title">Timetable<span></span></h5>
+                                <p>View school timetable </p>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <div class="widget no-box">
+                                <h5 class="widget-title">Notifications<span></span></h5>
+                                <p> No new notification </p>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+
+                            <div class="widget no-box">
+                                <h5 class="widget-title">Essential Apps<span></span></h5>
+
+                                <ul class="social-footer2">
+                                    <li class="">
+                                        <a href="http://www.keele.ac.uk/"> KEEL APP </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="http://www.firstbus.co.uk/"> FIRST BUS </a>
+                                    </li>
+                                    <li class="">
+                                        TEAMS
+                                    </li>
+                                    <li class="">
+                                        TAXI/UBER
+                                    </li>
+                                    <li class="">
+                                        BLACK BOARD
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <div class="widget no-box">
+                                <h5 class="widget-title">Time / Date<span></span></h5>
+                                <p> {{time}} </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <p>Copyright Keele University © 2022. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
